@@ -8,18 +8,18 @@
     <script>
         "use strict";
         document.write(
-            "<p style='text-align:center'>Вибір мови за допомогою оператора <strong>IF</strong></p>"
+            "<p style='text-align:center'>Вибір машини <strong>IF</strong></p>"
         );
 
-        let lang = prompt("Якій машині ви відаєте перевагу(bmw, mercedes-benz, porsche):", "bmw");
+        let lang = prompt("Якій машині ви відаєте перевагу(bmw, mercedes, porsche):");
         if (lang === "bmw") {
-            document.write("<div lang='bmw' style='text-align:center'>Українська мова</div>");
-        } else if (lang === "mercedes-benz") {
-            document.write("<div lang='mercedes-benz' style='text-align:center'>English language</div>");
+            document.write("<div lang='bmw' style='text-align:center'>Ви вибрали bmw</div>");
+        } else if (lang === "mercedes") {
+            document.write("<div lang='mercedes' style='text-align:center'>Ви вибрали mercedes-benz</div>");
         } else if (lang === "porsche") {
-            document.write("<div lang='porsche' style='text-align:center'>Język polski</div>");
+            document.write("<div lang='porsche' style='text-align:center'>Ви вибрали porsche>");
         } else {
-            document.write("Мову невизначено");
+            document.write("Машину не вибрано");
         }
     </script>
 </body>
