@@ -19,14 +19,6 @@
 			if (b >= 0 && b <= 220) validHeights.push(b);
 			if (c >= 0 && c <= 220) validHeights.push(c);
 
-                        if (a > b && a > c) {
-				document.write("Найбільше серед трьох чисел - 1. ", a);
-			} else if (b > c) {
-				document.write("Найбільше серед трьох чисел - 2. ", b);
-			} else (c > a) {
-				document.write("Найбільше серед трьох чисел - 3. ", c);
-			}
-
 			// Якщо жодне значення не є правильним
 			if (validHeights.length === 0) {
 				document.write("<p style='text-align:center'>Такий ріст неможливий</p>");
