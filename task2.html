@@ -7,16 +7,20 @@
 		<script>
 			"use strict";
 			document.write("<p style='text-align:center'>Приклад знаходження більшого числа</p>");
+			
 			let a = parseInt(prompt("Введіть 1 ріст людини: ")); 
-            let b = parseInt(prompt("Введіть 2 ріст людини: "));
-            let c = parseInt(prompt("Введіть 3 ріст людини: ")); 
+			let b = parseInt(prompt("Введіть 2 ріст людини: "));
+			let c = parseInt(prompt("Введіть 3 ріст людини: ")); 
+
+			// Displaying the entered values
+			document.write("<p style='text-align:center'>Введені числа: " + a + ", " + b + ", " + c + "</p>");
 			
 			if (a > b && a > c) {
-				document.write("Людина яка має найбільший зріст - 1. ", a);
+				document.write("Людина яка має найбільший зріст - 1. " + a);
 			} else if (b > c) {
-				document.write("Людина яка має найбільший зріст - 2. ", b);
+				document.write("Людина яка має найбільший зріст - 2. " + b);
 			} else if (c > a) {
-				document.write("Людина яка має найбільший зріст - 3. ", c);
+				document.write("Людина яка має найбільший зріст - 3. " + c);
 			} else {
 				document.write("Числа однакові");
 			}
@@ -25,7 +29,7 @@
 			max = (max > c) ? max : c;
 			
 			if (a != b || b != c || a != c) {
-				document.write("<p>Значення найбільшого росту людини - ", max, "</p>");
+				document.write("<p>Значення найбільшого росту людини - " + max + "</p>");
 			}
 		</script>
 	</body>
