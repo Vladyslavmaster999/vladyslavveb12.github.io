@@ -12,29 +12,24 @@
 			let b = parseInt(prompt("Введіть 2 ріст людини: "));
 			let c = parseInt(prompt("Введіть 3 ріст людини: ")); 
 
-			// Check if any height is outside the valid range
-			if (a < 0 || a > 220 || b < 0 || b > 220 || c < 0 || c > 220) {
+			// Перевіряємо введені значення та зберігаємо лише правильні
+			let validHeights = [];
+			
+			if (a >= 0 && a <= 220) validHeights.push(a);
+			if (b >= 0 && b <= 220) validHeights.push(b);
+			if (c >= 0 && c <= 220) validHeights.push(c);
+
+			// Якщо жодне значення не є правильним
+			if (validHeights.length === 0) {
 				document.write("<p style='text-align:center'>Такий ріст неможливий</p>");
 			} else {
-				// Displaying the entered values if they are valid
-				document.write("<p style='text-align:center'>Ріст: " + a + ", " + b + ", " + c + "</p>");
+				// Виводимо лише правильні значення
+				document.write("<p style='text-align:center'>Правильний ріст: " + validHeights.join(", ") + "</p>");
+				
+				// Знаходимо максимальне значення серед правильних
+				let max = Math.max(...validHeights);
 
-				if (a > b && a > c) {
-					document.write("Людина яка має найбільший зріст - 1. " + a);
-				} else if (b > c) {
-					document.write("Людина яка має найбільший зріст - 2. " + b);
-				} else if (c > a) {
-					document.write("Людина яка має найбільший зріст - 3. " + c);
-				} else {
-					document.write("Числа однакові");
-				}
-
-				let max = (a > b) ? a : b;
-				max = (max > c) ? max : c;
-
-				if (a != b || b != c || a != c) {
-					document.write("<p>Значення найбільшого росту людини - " + max + "</p>");
-				}
+				document.write("<p>Значення найбільшого росту людини - " + max + "</p>");
 			}
 		</script>
 	</body>
