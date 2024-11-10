@@ -2,36 +2,53 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Використання оператора IF</title>
+		<title>Використання операторів циклу та факторіала</title>
 	</head>	
 	<body>
 		<script> 
 			"use strict";
-			document.write("<p>Використання оператора циклу	<b>FOR</b></p>");			
-			// Зведення числа x у ступінь
-			let x = parseInt(prompt("Введіть число x")); // задане число
-			let y = parseInt(prompt("Введіть ступінь y")); // ступінь, до якого треба звести число
-			let z = x; // результат
-			
-			for (let i = 2; i <= Math.abs(y); i++) z = z * x; z = y > 0? z: 1/z;
-			document.write("Число ", x, " в ступені ", y, " дорівнює ", z);
+
+			// Функція для обчислення факторіала
+			function factorial(n) {
+				let result = 1;
+				for (let i = 1; i <= n; i++) {
+					result *= i;
+				}
+				return result;
+			}
+
+			// Отримання чисел x та y від користувача
+			let x = parseInt(prompt("Введіть число x")); 
+			let y = parseInt(prompt("Введіть число y"));
+
+			document.write("<p>Використання оператора циклу <b>FOR</b></p>");	
+			let productFor = 0;
+			for (let i = 0; i < y; i++) {
+				productFor += x;  // додавання x, y разів
+			}
+			let factorialFor = factorial(productFor);
+			document.write("Результат множення x і y під факторіалом (FOR) дорівнює ", factorialFor, "<br>");
 
 			document.write("<p>Використання оператора циклу <b>WHILE</b></p>");
-			let z1 = x; let i = 2;
-			while (i <= Math.abs(y)) { 
-				z1 = z1 * x;
+			let productWhile = 0;
+			let i = 0;
+			while (i < y) {
+				productWhile += x; // додавання x, y разів
 				i++;
 			}
-			z1 = y > 0? z1: 1/z1;
-			document.write("Число ", x, " в ступені ", y, " дорівнює ", z1);
+			let factorialWhile = factorial(productWhile);
+			document.write("Результат множення x і y під факторіалом (WHILE) дорівнює ", factorialWhile, "<br>");
 
 			document.write("<p>Використання оператора циклу <b>DO WHILE</b></p>");
-			let z2 = x; i = 2;
+			let productDoWhile = 0;
+			i = 0;
 			do {
-				z2 = z2 * x; i++;
-			} 
-			while (i <= Math.abs(y)); z2 = y> 0? z2: 1/z2;
-			document.write("Число ", x, " в ступені ", y, " дорівнює ", z2);
+				productDoWhile += x; // додавання x, y разів
+				i++;
+			} while (i < y);
+			let factorialDoWhile = factorial(productDoWhile);
+			document.write("Результат множення x і y під факторіалом (DO WHILE) дорівнює ", factorialDoWhile, "<br>");
+
 		</script>
 	</body>
 </html>
