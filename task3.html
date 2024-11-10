@@ -12,22 +12,22 @@
 
 			switch (true) {
 				case (growth < 0 || growth > 220):
-					view = "недійсний вік";
+					view = "неіснуючий ріст";
 					break;
-				case (growth < 12):
-					view = "дитина"; 
+				case (growth < 140):
+					view = "карликовість"; 
 					break;
-				case (growth < 18):
-					view = "підліток"; 
+				case (growth < 170):
+					view = "малий ріст"; 
 					break;
-				case (growth < 65):
-					view = "дорослий"; 
+				case (growth < 180):
+					view = "середній ріст"; 
 					break;
 				default:
-					view = "пенсіонер"; 
+					view = "високий ріст"; 
 			}
 			
-			document.write("Ви - ", view);
+			document.write("Ви маєте - ", view);
 		</script>
 	</body>
 </html>
