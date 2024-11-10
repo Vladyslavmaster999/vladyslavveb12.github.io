@@ -9,16 +9,14 @@
     <script>
         "use strict";
 
-        let name_input, age_input, city_input;
+        let car_input, year_input;
 
-        name_input = prompt("введіть своє імʼя: "); 
-        age_input = prompt("введіть свій вік: "); 
-        city_input = prompt("введіть своє місто: "); 
-
+        car_input = prompt("введіть назву машини: "); 
+        year_input = prompt("введіть рік створення: "); 
+  
         const person = {
-            name: name_input,
-            age: age_input,
-            city: city_input
+            car: car_input,
+            year:  year_input
         }
 
         for (let key in person){
