@@ -1,9 +1,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/style.css">
 		<title>Класифікація за віком</title>
-		    <link rel="stylesheet" href="../css/style.css">
 	</head>	
 	<body>
 		<script>
@@ -12,7 +11,7 @@
 			let classification;
 
 			switch (true) {
-				case (age < 0 && age > 120):
+				case (age < 0 || age > 120):
 					classification = "недійсний вік";
 					break;
 				case (age < 12):
