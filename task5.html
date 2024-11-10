@@ -9,18 +9,20 @@
     <script>
         "use strict";
 
-        let car_enter, year_enter;
+        let name_input, age_input, city_input;
 
-        car_enter = prompt("введіть назву машини: "); 
-        year_enter = prompt("введіть рік створення машини: "); 
-       
-        const document = {
-            car: car_enter,
-            year: year_enter
+        name_input = prompt("введіть своє імʼя: "); 
+        age_input = prompt("введіть свій вік: "); 
+        city_input = prompt("введіть своє місто: "); 
+
+        const person = {
+            name: name_input,
+            age: age_input,
+            city: city_input
         }
 
-        for (let propertyName in document){
-            document.write(propertyName + ": " + document[propertyName] + "  ");
+        for (let key in person){
+            document.write(key + ": " + person[key] + "  ");
         }
         
     </script>
