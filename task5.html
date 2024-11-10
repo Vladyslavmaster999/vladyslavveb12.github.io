@@ -1,17 +1,28 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Використання оператора IF</title>
-	</head>	
-	<body>
-		<script> 
-			"use strict";		
-			let propertyInfo = "";
-			for (let propertyName in document) {
-				propertyInfo=propertyName + "-" + document[propertyName];
-				document.write(propertyInfo + "<br>");
-			}
-		</script>
-	</body>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>привітання</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let car_enter, year_enter;
+
+        car_enter = prompt("введіть назву машини: "); 
+        year_enter = prompt("введіть рік створення машини: "); 
+       
+        const document = {
+            car: car_enter,
+            year:  year_enter,
+        }
+
+        for (let propertyName in document){
+            document.write(propertyName + ": " + document[propertyName] + "  ");
+        }
+        
+    </script>
+</body>
 </html>
