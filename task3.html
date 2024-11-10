@@ -2,32 +2,32 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="../css/style.css">
-		<title>Класифікація за віком</title>
+		<title>Ріст</title>
 	</head>	
 	<body>
 		<script>
 			"use strict";
-			let age = parseInt(prompt("Введіть ваш вік")); 
-			let classification;
+			let growth = parseInt(prompt("Введіть ваш ріст")); 
+			let view;
 
 			switch (true) {
-				case (age < 0 || age > 120):
-					classification = "недійсний вік";
+				case (growth < 0 || growth > 220):
+					view = "недійсний вік";
 					break;
-				case (age < 12):
-					classification = "дитина"; 
+				case (growth < 12):
+					view = "дитина"; 
 					break;
-				case (age < 18):
-					classification = "підліток"; 
+				case (growth < 18):
+					view = "підліток"; 
 					break;
-				case (age < 65):
-					classification = "дорослий"; 
+				case (growth < 65):
+					view = "дорослий"; 
 					break;
 				default:
-					classification = "пенсіонер"; 
+					view = "пенсіонер"; 
 			}
 			
-			document.write("Ви - ", classification);
+			document.write("Ви - ", view);
 		</script>
 	</body>
 </html>
