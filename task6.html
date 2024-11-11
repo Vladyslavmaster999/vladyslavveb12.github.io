@@ -12,10 +12,10 @@
 			let a = true; 
 			let number; 
 			let count = 0;
-			let answer = confirm("Зіграємо?"); 
+			let answer = confirm("Потрібно вгадати число(ви маєте лиш 10 спроб)"); 
 			if (answer) {
 				while (a && count < 10) { // обмеження на 10 спроб
-					number = parseInt(prompt("введіть число")); 
+					number = parseInt(prompt("Введіть число(від 1 - 200)")); 
 					count++;
 					if (number == games) {
 						alert("Ви вгадали\n кількість спроб: " + count); 
@@ -32,7 +32,7 @@
 					alert("Спроби вичерпано. Ви не вгадали число, яке було: " + games);
 				}
 			} 
-			else alert("Шкода.\nМоже бути в інший раз?");
+			else alert("Зрозумів.\nМоже в наступний раз.");
 		</script>
 	</body>
 </html>
