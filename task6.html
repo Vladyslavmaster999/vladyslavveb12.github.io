@@ -8,18 +8,18 @@
 		<script> 
 			"use strict";
 			let guess = Math.random() * 200 + 1; // генерація випадкового числа від 1 до 200
-			guess = Math.floor(guess); // відкидання дробової частини
-			let f = true; 
+			
+			let a = true; 
 			let number; 
 			let count = 0;
 			let answer = confirm("Зіграємо?"); 
 			if (answer) {
-				while (f && count < 10) { // обмеження на 10 спроб
+				while (a && count < 10) { // обмеження на 10 спроб
 					number = parseInt(prompt("введіть число")); 
 					count++;
 					if (number == guess) {
 						alert("Ви вгадали\n кількість спроб: " + count); 
-						f = false;
+						a = false;
 					} 	
 					else if (number > guess) {
 						alert("Число менше, спробуйте ще раз");
@@ -28,7 +28,7 @@
 						alert("Число більше, спробуйте ще раз");
 					}
 				}
-				if (f) {
+				if (a) {
 					alert("Спроби вичерпано. Ви не вгадали число, яке було: " + guess);
 				}
 			} 
