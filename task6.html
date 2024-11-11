@@ -5,28 +5,31 @@
 		<title>Використання оператора IF</title>
 	</head>	
 	<body>
-		<script> "use strict";
-			let guess = Math.random() * 100; // генерація випадкового числа
+		<script> 
+			"use strict";
+			let guess = Math.random() * 200 + 1; // генерація випадкового числа від 1 до 200
 			guess = Math.floor(guess); // відкидання дробової частини
 			let f = true; 
 			let number; 
 			let count = 0;
 			let answer = confirm("Зіграємо?"); 
 			if (answer) {
-				while (f) {
+				while (f && count < 10) { // обмеження на 10 спроб
 					number = parseInt(prompt("введіть число")); 
 					count++;
 					if (number == guess) {
-						alert("Ви вгадали\n кількість спроб: "+ count); 
+						alert("Ви вгадали\n кількість спроб: " + count); 
 						f = false;
 					} 	
-						else 
-							if (number > guess) {
-								alert("Число менше, спробуйте ще раз");
-							} 	
-							else {
-								alert("Число більше, спробуйте ще раз");
-							}
+					else if (number > guess) {
+						alert("Число менше, спробуйте ще раз");
+					} 	
+					else {
+						alert("Число більше, спробуйте ще раз");
+					}
+				}
+				if (f) {
+					alert("Спроби вичерпано. Ви не вгадали число, яке було: " + guess);
 				}
 			} 
 			else alert("Шкода.\nМоже бути в інший раз?");
